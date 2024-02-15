@@ -1,9 +1,6 @@
 return {
 	--TODO: git integration
-	-- fugitive
-	-- lazygit
 	-- copilot
-	-- gitsigns?
 	--TODO: add harpoon
 	--TODO: change todo highlight color
 	--TODO: look into dashboard vs. alpha

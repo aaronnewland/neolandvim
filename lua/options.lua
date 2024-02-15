@@ -4,7 +4,6 @@ local g = vim.g
 -------------------------------------- globals -----------------------------------------
 g.transparency = true
 g.mapleader = " "
-
 ------------------------------------- options -----------------------------------------
 --opt.laststatus = 3 -- global statusline
 --opt.showmode = false
@@ -18,11 +17,10 @@ opt.hlsearch = false
 
 -- Indenting
 opt.expandtab = true
-opt.shiftwidth = 4
+opt.shiftwidth = 2
 opt.smartindent = true
-opt.tabstop = 4
+opt.tabstop = 2
 opt.softtabstop = 2
-
 opt.fillchars = { eob = " " }
 opt.ignorecase = true
 opt.smartcase = true
@@ -54,3 +52,16 @@ opt.termguicolors = true
 opt.scrolloff = 999
 -- Preview changes for search and replace
 opt.inccommand = "split"
+
+-- Set highlight bottom line for TreeSitterContext
+vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = true })
+vim.api.nvim_set_hl(0, "TreesitterContextLineNumberBottom", { underline = true })
+
+-- vim.diagnostic.config({
+-- 	virtual_text = {
+-- 		DiagnosticVirtualTextError = "󰳤",
+-- 		DiagnosticVirtualTextWarn = "󰳤",
+-- 		DiagnosticVirtualTextHint = "󰳤",
+-- 		DiagnosticVirtualTextInfo = "󰳤",
+-- 	},
+-- })

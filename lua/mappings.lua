@@ -1,7 +1,7 @@
 local map = vim.keymap
 
 map.set("n", "<leader>pv", vim.cmd.Ex)
-map.set("n", "<leader>b", ":enew<CR>", { desc = "new [b]uffer" })
+map.set("n", "<leader>bn", ":enew<CR>", { desc = "create [b]uffer [n]ew" })
 map.set("n", "<leader>noh", "<cmd> set hlsearch! <CR>", { desc = "[n][o] [h]ighlight search toggle" })
 map.set("n", "<C-a>", "ggVG", { desc = "select [a]ll text in file" })
 
@@ -54,3 +54,8 @@ map.set("n", "<leader>tq", "<cmd> TodoQuickFix <CR>", { desc = "[t]odo [q]uick f
 map.set("n", "<leader>tl", "<cmd> TodoLocList <CR>", { desc = "[t]odo [l]ocation list" })
 map.set("n", "<leader>tT", "<cmd> TodoTrouble <CR>", { desc = "[t]odo [T]rouble list" })
 map.set("n", "<leader>tt", "<cmd> TodoTelescope <CR>", { desc = "[t]odo [t]elescope search" })
+
+-------------------------------------- TreesitterContext ---------------------------------
+vim.keymap.set("n", "[c", function()
+	require("treesitter-context").go_to_context(vim.v.count1)
+end, { silent = true })

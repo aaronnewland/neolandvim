@@ -30,14 +30,16 @@ return {
 				"EndOfBuffer",
 			},
 			extra_groups = {
-				-- "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
+				"NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
 				"NvimTree", -- NvimTree, -- table: additional groups that should be cleared
 				"BufferLine",
+				"NvimCmp",
 			},
 			exclude_groups = {}, -- table: groups you don't want to clear
 		})
 		require("transparent").clear_prefix("NvimTree")
 		require("transparent").clear_prefix("BufferLine")
 		require("transparent").clear_prefix("TreeSitter")
+		require("transparent").clear_prefix("nvim-cmp")
 	end,
 }
