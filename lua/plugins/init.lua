@@ -8,6 +8,15 @@ return {
 	--TODO: add dap/debugging
 
 	{
+		"MaxMEllon/vim-jsx-pretty",
+	},
+	{
+		"othree/javascript-libraries-syntax.vim",
+	},
+	{
+		"pangloss/vim-javascript",
+	},
+	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 	},
 
@@ -46,5 +55,8 @@ return {
 	{
 		"tpope/vim-fugitive",
 		event = "VeryLazy",
+	},
+	{
+		"RRethy/vim-illuminate",
 	},
 }

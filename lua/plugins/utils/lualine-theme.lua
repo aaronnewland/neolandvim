@@ -6,11 +6,18 @@ M.theme = function()
 		file = "#a9b1d5",
 		innerbg = nil,
 		outerbg = "#3a4260",
-		normal = "#7aa1f6",
-		insert = "#9ece6a",
-		visual = "#bb9af7",
-		replace = "#f7768e",
-		command = "#e1af67",
+
+		normal_tokyonight = "#7aa1f6",
+		insert_tokyonight = "#9ece6a",
+		visual_tokyonight = "#bb9af7",
+		replace_tokyonight = "#f7768e",
+		command_tokyonight = "#e1af67",
+
+		normal_catppuccin = "#89b4fb",
+		insert_catpuccin = "#d1fac5",
+		visual_catpuccin = "#cba7f7",
+		replace_catpuccin = "#f28ba8",
+		command_catpuccin = "#fdc6a8",
 	}
 	return {
 		inactive = {
@@ -19,28 +26,28 @@ M.theme = function()
 			c = { fg = colors.gray, bg = colors.innerbg },
 		},
 		visual = {
-			a = { fg = colors.darkgray, bg = colors.visual },
-			b = { fg = colors.visual, bg = colors.outerbg },
+			a = { fg = colors.darkgray, bg = colors.visual_catpuccin },
+			b = { fg = colors.visual_catpuccin, bg = colors.outerbg },
 			c = { fg = colors.file, bg = colors.innerbg },
 		},
 		replace = {
-			a = { fg = colors.darkgray, bg = colors.replace },
-			b = { fg = colors.replace, bg = colors.outerbg },
+			a = { fg = colors.darkgray, bg = colors.replace_catpuccin },
+			b = { fg = colors.replace_catpuccin, bg = colors.outerbg },
 			c = { fg = colors.file, bg = colors.innerbg },
 		},
 		normal = {
-			a = { fg = colors.darkgray, bg = colors.normal },
-			b = { fg = colors.normal, bg = colors.outerbg },
+			a = { fg = colors.darkgray, bg = colors.normal_catppuccin },
+			b = { fg = colors.normal_catppuccin, bg = colors.outerbg },
 			c = { fg = colors.file, bg = colors.innerbg },
 		},
 		insert = {
-			a = { fg = colors.darkgray, bg = colors.insert },
-			b = { fg = colors.insert, bg = colors.outerbg },
+			a = { fg = colors.darkgray, bg = colors.insert_catpuccin },
+			b = { fg = colors.insert_catpuccin, bg = colors.outerbg },
 			c = { fg = colors.file, bg = colors.innerbg },
 		},
 		command = {
-			a = { fg = colors.darkgray, bg = colors.command },
-			b = { fg = colors.command, bg = colors.outerbg },
+			a = { fg = colors.darkgray, bg = colors.command_catpuccin },
+			b = { fg = colors.command_catpuccin, bg = colors.outerbg },
 			c = { fg = colors.file, bg = colors.innerbg },
 		},
 	}

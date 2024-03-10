@@ -20,6 +20,8 @@ return {
 			highlight = {
 				enable = true,
 			},
+			-- may cause problems!!
+			indent = { enable = true },
 			incremental_selection = {
 				enable = true,
 				keymaps = {

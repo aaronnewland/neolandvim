@@ -8,6 +8,11 @@ g.mapleader = " "
 --opt.laststatus = 3 -- global statusline
 --opt.showmode = false
 
+-- Blinking cursor
+-- Currently set to block/blink in normal and v-line/blink in insert
+opt.guicursor =
+	"n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+
 -- Sync nvim clipboard with system clipboard
 opt.clipboard = "unnamedplus"
 --opt.cursorline = true
@@ -57,11 +62,6 @@ opt.inccommand = "split"
 vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = true })
 vim.api.nvim_set_hl(0, "TreesitterContextLineNumberBottom", { underline = true })
 
--- vim.diagnostic.config({
--- 	virtual_text = {
--- 		DiagnosticVirtualTextError = "󰳤",
--- 		DiagnosticVirtualTextWarn = "󰳤",
--- 		DiagnosticVirtualTextHint = "󰳤",
--- 		DiagnosticVirtualTextInfo = "󰳤",
--- 	},
--- })
+-------------------------------------- autocommands --------------------------------------
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")

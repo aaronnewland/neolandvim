@@ -38,10 +38,10 @@ return {
 			keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
 			opts.desc = "Show buffer diagnostics"
-			keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+			keymap.set("n", "<leader>DD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
 			opts.desc = "Show line diagnostics"
-			keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+			keymap.set("n", "<leader>Dd", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
 			opts.desc = "Go to previous diagnostic"
 			keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -65,6 +65,12 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
+
+		--configure markdown server
+		lspconfig["marksman"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 
 		-- configure html server
 		lspconfig["html"].setup({
@@ -100,6 +106,19 @@ return {
 		lspconfig["pyright"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			root_dir = lspconfig.util.root_pattern(
+				"tailwind.config.js",
+				"tailwind.config.cjs",
+				"tailwind.config.mjs",
+				"tailwind.config.ts",
+				"postcss.config.js",
+				"postcss.config.cjs",
+				"postcss.config.mjs",
+				"postcss.config.ts",
+				"package.json",
+				"node_modules",
+				".git"
+			),
 		})
 
 		-- configure lua server (with special settings)
