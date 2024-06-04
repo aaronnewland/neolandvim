@@ -8,6 +8,7 @@ g.mapleader = " "
 --opt.laststatus = 3 -- global statusline
 --opt.showmode = false
 
+-- TODO: fix
 -- Blinking cursor
 -- Currently set to block/blink in normal and v-line/blink in insert
 opt.guicursor =
