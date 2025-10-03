@@ -13,6 +13,7 @@ return {
 				"alpha",
 				"dashboard",
 				"neo-tree",
+				"nvim-tree",
 				"Trouble",
 				"trouble",
 				"lazy",

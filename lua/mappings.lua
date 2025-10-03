@@ -44,7 +44,18 @@ map.set(
 	"<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
 	{ desc = "toggle comment" }
 )
-
+map.set(
+	"n",
+	"<leader>.",
+	"<cmd>lua require('Comment.api').toggle.blockwise.current() <CR>",
+	{ desc = "toggle comment" }
+)
+map.set(
+	"v",
+	"<leader>.",
+	"<ESC><cmd>lua require('Comment.api').toggle.blockwise(vim.fn.visualmode())<CR>",
+	{ desc = "toggle comment" }
+)
 -------------------------------------- tmux navigation -----------------------------------
 map.set("n", "<C-h>", "<cmd> TmuxNavigateLeft <CR>", { desc = "Tmux Window left" })
 map.set("n", "<C-l>", "<cmd> TmuxNavigateRight <CR>", { desc = "Tmux Window right" })

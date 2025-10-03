@@ -1,11 +1,8 @@
 return {
-	--TODO: git integration
-	-- copilot
 	--TODO: add harpoon
 	--TODO: change todo highlight color
 	--TODO: look into dashboard vs. alpha
 	--TODO: auto-session
-	--TODO: add dap/debugging
 
 	{
 		"MaxMEllon/vim-jsx-pretty",
@@ -93,7 +90,29 @@ return {
 		"tpope/vim-fugitive",
 		event = "VeryLazy",
 	},
+	--TODO: this is highlighting weird syntax
 	{
 		"RRethy/vim-illuminate",
+	},
+	{
+		"Exafunction/codeium.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup({
+				opts = {
+					virtual_text = true,
+				},
+			})
+		end,
+	},
+	{
+		"kevinhwang91/nvim-ufo",
+		dependencies = { "kevinhwang91/promise-async" },
+		config = function()
+			require("ufo").setup()
+		end,
 	},
 }

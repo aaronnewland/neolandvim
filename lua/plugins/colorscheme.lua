@@ -39,7 +39,7 @@ return {
 				styles = {
 					comments = { "italic" },
 					keywords = { "italic" },
-					functions = { "italic" },
+					-- functions = { "italic" },
 				},
 				integrations = {
 					-- harpoon = true,
@@ -72,6 +72,13 @@ return {
 							DiagnosticVirtualTextWarn = { bg = colors.none },
 							DiagnosticVirtualTextHint = { bg = colors.none },
 							DiagnosticVirtualTextInfo = { bg = colors.none },
+						}
+					end,
+					mocha = function(mocha)
+						return {
+							-- Function = { fg = mocha.yellow },
+							-- ["@keyword"] = { fg = mocha.green },
+							["@keyword.function"] = { fg = mocha.green },
 						}
 					end,
 				},

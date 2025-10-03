@@ -34,6 +34,17 @@ return {
 				},
 				view = "mini",
 			},
+			-- Prevents an error where a message would show "No information available"
+			-- on LSP hover that did have information.
+			{
+				filter = {
+					event = "notify",
+					find = "No information available",
+				},
+				opts = {
+					skip = true,
+				},
+			},
 		},
 		presets = {
 			bottom_search = false,

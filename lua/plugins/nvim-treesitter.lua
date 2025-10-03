@@ -17,20 +17,20 @@ return {
 
 			auto_install = true,
 
-			highlight = {
-				enable = true,
-			},
-			-- may cause problems!!
-			indent = { enable = true },
-			incremental_selection = {
-				enable = true,
-				keymaps = {
-					init_selection = "<leader>ss", -- set to `false` to disable one of the mappings
-					node_incremental = "<leader>si",
-					scope_incremental = "<leader>sc",
-					node_decremental = "<leader>sd",
-				},
-			},
+			-- highlight = {
+			-- 	enable = true,
+			-- },
+			-- -- may cause problems!!
+			-- indent = { enable = true },
+			-- incremental_selection = {
+			-- 	enable = true,
+			-- 	keymaps = {
+			-- 		init_selection = "<leader>ss", -- set to `false` to disable one of the mappings
+			-- 		node_incremental = "<leader>si",
+			-- 		scope_incremental = "<leader>sc",
+			-- 		node_decremental = "<leader>sd",
+			-- 	},
+			-- },
 
 			textobjects = {
 				select = {
