@@ -111,7 +111,7 @@ return {
 		})
 		vim.lsp.enable("cssls")
 
-		vim.lsp.config("pyright", {
+		vim.lsp.config("basedpyright", {
 			filetypes = { "python" },
 			root_markers = {
 				"tailwind.config.js",
@@ -127,7 +127,7 @@ return {
 				".git",
 			},
 		})
-		vim.lsp.enable("pyright")
+		vim.lsp.enable("basedpyright")
 
 		vim.lsp.config("lua_ls", {
 			filetypes = { "lua" },
