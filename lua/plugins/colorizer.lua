@@ -1,5 +1,55 @@
 return {
-	"NvChad/nvim-colorizer.lua",
-	event = { "BufReadPre", "BufNewFile" },
-	config = true,
+	"catgoose/nvim-colorizer.lua",
+	event = "BufReadPre",
+	opts = {
+		options = {
+			parsers = {
+				css = true, -- preset: enables names, hex, rgb, hsl, oklch
+				css_fn = true, -- preset: enables rgb, hsl, oklch
+				names = {
+					enable = false,
+					lowercase = true,
+					camelcase = true,
+					uppercase = false,
+					strip_digits = false,
+					custom = false, -- table|function|false
+				},
+				hex = {
+					default = true, -- default value for format keys (see above)
+				},
+				tailwind = {
+					enable = true, -- parse Tailwind color names
+					lsp = true, -- use Tailwind LSP documentColor
+					update_names = true,
+				},
+				sass = {
+					enable = false,
+					parsers = { css = true },
+					variable_pattern = "^%$([%w_-]+)",
+				},
+				xterm = { enable = false },
+				custom = {},
+			},
+			display = {
+				mode = "background", -- "background"|"foreground"|"virtualtext"
+				background = {
+					bright_fg = "#000000",
+					dark_fg = "#ffffff",
+				},
+				virtualtext = {
+					char = "■",
+					position = "eol", -- "eol"|"before"|"after"
+					hl_mode = "foreground",
+				},
+				priority = {
+					default = 150, -- vim.hl.priorities.diagnostics
+					lsp = 200, -- vim.hl.priorities.user
+				},
+			},
+			hooks = {
+				should_highlight_line = false, -- function(line, bufnr, line_num) -> bool
+			},
+			always_update = false,
+		},
+	},
 }

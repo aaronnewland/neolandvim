@@ -90,10 +90,18 @@ return {
 		"tpope/vim-fugitive",
 		event = "VeryLazy",
 	},
-	--TODO: this is highlighting weird syntax
-	{
-		"RRethy/vim-illuminate",
-	},
+	-- {
+	-- 	"RRethy/vim-illuminate",
+	-- 	config = function()
+	-- 		require("illuminate").configure({
+	-- 			-- Without this large scopes of syntax are highlighted in .jsx and .tsx
+	-- 			filetype_overrides = {
+	-- 				javascriptreact = { providers = { "regex" } },
+	-- 				typescriptreact = { providers = { "regex" } },
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 	{
 		"Exafunction/codeium.nvim",
 		dependencies = {

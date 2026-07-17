@@ -3,7 +3,7 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = { "hrsh7th/cmp-nvim-lsp", { "antosha417/nvim-lsp-file-operations", config = true } },
 	config = function()
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		local cmp_nvim_lsp = vim.lsp.enable("cmp_nvim_lsp")
 
 		local keymap = vim.keymap -- for conciseness
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -72,17 +72,50 @@ return {
 		})
 
 		vim.lsp.config("emmet_ls", {
-			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+			filetypes = {
+				"html",
+				"typescript",
+				"javascript",
+				"typescriptreact",
+				"javascriptreact",
+				"css",
+				"sass",
+				"scss",
+				"less",
+				"svelte",
+			},
 		})
 		vim.lsp.enable("emmet_ls")
 
 		vim.lsp.config("eslint", {
-			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+			filetypes = {
+				"html",
+				"typescript",
+				"javascript",
+				"typescriptreact",
+				"javascriptreact",
+				"css",
+				"sass",
+				"scss",
+				"less",
+				"svelte",
+			},
 		})
 		vim.lsp.enable("eslint")
 
 		vim.lsp.config("ts_ls", {
-			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+			filetypes = {
+				"html",
+				"typescript",
+				"javascript",
+				"typescriptreact",
+				"javascriptreact",
+				"css",
+				"sass",
+				"scss",
+				"less",
+				"svelte",
+			},
 		})
 		vim.lsp.enable("ts_ls")
 
@@ -113,19 +146,19 @@ return {
 
 		vim.lsp.config("basedpyright", {
 			filetypes = { "python" },
-			root_markers = {
-				"tailwind.config.js",
-				"tailwind.config.cjs",
-				"tailwind.config.mjs",
-				"tailwind.config.ts",
-				"postcss.config.js",
-				"postcss.config.cjs",
-				"postcss.config.mjs",
-				"postcss.config.ts",
-				"package.json",
-				"node_modules",
-				".git",
-			},
+			-- root_markers = {
+			-- 	"tailwind.config.js",
+			-- 	"tailwind.config.cjs",
+			-- 	"tailwind.config.mjs",
+			-- 	"tailwind.config.ts",
+			-- 	"postcss.config.js",
+			-- 	"postcss.config.cjs",
+			-- 	"postcss.config.mjs",
+			-- 	"postcss.config.ts",
+			-- 	"package.json",
+			-- 	"node_modules",
+			-- 	".git",
+			-- },
 		})
 		vim.lsp.enable("basedpyright")
 
