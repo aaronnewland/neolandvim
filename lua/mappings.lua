@@ -95,20 +95,3 @@ map.set("n", "<leader>tt", "<cmd> TodoTelescope <CR>", { desc = "[t]odo [t]elesc
 vim.keymap.set("n", "[c", function()
 	require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
-
--------------------------------------- Dap ---------------------------------
-vim.keymap.set("n", "<leader>db", function()
-	require("dap").toggle_breakpoint()
-end, { desc = "[d]ap toggle [b]reakpoint" })
-
-vim.keymap.set("n", "<leader>dc", function()
-	require("dap").continue()
-end, { desc = "[d]ap [c]ontinue" })
-
-vim.keymap.set("n", "<leader>ds", function()
-	require("dap").step_into()
-end, { desc = "[d]ap [s]tep into" })
-
-vim.keymap.set("n", "<leader>dR", function()
-	require("dap").repl.open()
-end, { desc = "[d]ap inspect state via [R]EPL" })

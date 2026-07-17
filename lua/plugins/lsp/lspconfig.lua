@@ -162,6 +162,11 @@ return {
 		})
 		vim.lsp.enable("basedpyright")
 
+		vim.lsp.config("gopls", {
+			filetypes = { "go" },
+		})
+		vim.lsp.enable("gopls")
+
 		vim.lsp.config("lua_ls", {
 			filetypes = { "lua" },
 			settings = {
